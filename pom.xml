@@ -3,35 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mycompany</groupId>
+	<groupId>com.generali.api</groupId>
 	<artifactId>test-helloword</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 	<name>test-helloworld</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<app.runtime>4.4.0-20211026</app.runtime>
+		<app.runtime>4.4.0</app.runtime>
 		<mule.maven.plugin.version>3.5.3</mule.maven.plugin.version>
 		<munit.version>2.3.6</munit.version>
 		<sonar.sources>src/</sonar.sources>
-		<!-- ANYPOINT -->
-		<connectedApp.clientId>${CONNECTED_APP_CLIENT_ID}</connectedApp.clientId>
-		<connectedApp.clientSecret>${CONNECTED_APP_CLIENT_SECRET}</connectedApp.clientSecret>
-		<anypoint.uri>https://anypoint.mulesoft.com</anypoint.uri>
-		<!-- CLOUDHUB -->
-		<cloudhub.masterBusinessGroupId>${CH_ORGID}</cloudhub.masterBusinessGroupId>
-		<cloudhub.businessGroupId>${CH_BGID}</cloudhub.businessGroupId>
-		<cloudhub.businessGroup>${CH_BG_NAME}</cloudhub.businessGroup>
-		<cloudhub.environment>${CH_ENV}</cloudhub.environment>
-		<cloudhub.region>${CH_RGN}</cloudhub.region>
-		<cloudhub.workerType>${CH_WORKERTYPE}</cloudhub.workerType>
-		<cloudhub.workers>${CH_WORKERS}</cloudhub.workers>
-		<cloudhub.clientId>${CH_CLIENT_ID}</cloudhub.clientId>
-		<cloudhub.clientSecret>${CH_CLIENT_SECRET}</cloudhub.clientSecret>
-		<cloudhub.applicationName>${CH_APPLICATION_NAME}</cloudhub.applicationName>
-		<cloudhub.monitoringEnabled>${CH_MONITORING_ENABLED}</cloudhub.monitoringEnabled>
-		<cloudhub.skipDeploymentVerification>${CH_SKIP_DEPLOYMENT_VERIFICATION}</cloudhub.skipDeploymentVerification>
 	</properties>
 	<build>
 		<plugins>
@@ -60,10 +43,6 @@
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
 						<workerType>MICRO</workerType>
-						<properties>
-							<!--api.autodiscoveryid>${cloudhub.api.id}</api.autodiscoveryid>
-						<anypoint.platform.client_id>${cloudhub.env.id}</anypoint.platform.client_id>
-						<anypoint.platform.client_secret>${cloudhub.env.secret}</anypoint.platform.client_secret--></properties>
 					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
 				</configuration>
